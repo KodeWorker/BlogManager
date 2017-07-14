@@ -3,6 +3,19 @@ import os
 def generate_post(init_ind, end_ind, file_list):
     file_content = file_list[init_ind:end_ind - 1]
     title = file_list[init_ind].decode("utf-8")[7:-2]
+    
+    if ']' in title:
+        title = title[title.index(']')+1:]
+    title = title.replace(' ', '')
+    title = title.replace('.', '')
+    title = title.replace('-', '')
+    title = title.replace('，', '')
+    title = title.replace('？', '')
+    title = title.replace('！', '')
+    title = title.replace('☆', '')
+    title = title.replace('(', '')
+    title = title.replace(')', '')
+    
     date = file_list[init_ind+2].decode("utf-8")[6:16]
     file_name = '%s-%s-%s-%s.md' %(date[-4:], date[:2], date[-7:-5], title)
     return file_content, file_name
