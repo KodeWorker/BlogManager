@@ -30,8 +30,9 @@ def generate_metadata(metadata):
     for line in metadata:
         if 'TITLE'.encode('utf-8') in line:
             
-            if ']'.encode('utf-8') in line:
-                title = str(line)[str(line).index(']')+1:]
+            title = str(line, 'utf-8')
+            if ']' in title:
+                title = title[title.index(']')+1:]
             
             output_metadata.append(b'title: %s' %title.encode('utf-8'))
         if 'DATE'.encode('utf-8') in line:

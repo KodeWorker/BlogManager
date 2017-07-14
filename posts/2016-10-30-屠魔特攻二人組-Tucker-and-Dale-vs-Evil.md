@@ -1,6 +1,7 @@
 ---
 layout: single
-title: \xe5\xb1\xa0\xe9\xad\x94\xe7\x89\xb9\xe6\x94\xbb\xe4\xba\x8c\xe4\xba\xba\xe7\xb5\x84(Tucker and Dale vs. Evil)\r\n'date: 2016-10-30 06:06:31
+title: 屠魔特攻二人組(Tucker and Dale vs. Evil)
+date: 2016-10-30 06:06:31
 categories:
 - 認真電影心得
 tags:

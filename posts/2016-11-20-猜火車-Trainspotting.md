@@ -1,6 +1,7 @@
 ---
 layout: single
-title: \xe7\x8c\x9c\xe7\x81\xab\xe8\xbb\x8a(Trainspotting)\r\n'date: 2016-11-20 06:59:11
+title: 猜火車(Trainspotting)
+date: 2016-11-20 06:59:11
 categories:
 - 認真電影心得
 tags:

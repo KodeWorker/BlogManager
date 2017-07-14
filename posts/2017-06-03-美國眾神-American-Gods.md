@@ -1,6 +1,7 @@
 ---
 layout: single
-title: \xe7\xbe\x8e\xe5\x9c\x8b\xe7\x9c\xbe\xe7\xa5\x9e(American Gods)\r\n'date: 2017-06-03 06:51:54
+title: 美國眾神(American Gods)
+date: 2017-06-03 06:51:54
 categories:
 - 認真讀書心得
 tags:

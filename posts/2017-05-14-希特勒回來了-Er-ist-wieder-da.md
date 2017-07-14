@@ -1,6 +1,7 @@
 ---
 layout: single
-title: \xe5\xb8\x8c\xe7\x89\xb9\xe5\x8b\x92\xe5\x9b\x9e\xe4\xbe\x86\xe4\xba\x86(Er ist wieder da)\r\n'date: 2017-05-14 02:26:29
+title: 希特勒回來了(Er ist wieder da)
+date: 2017-05-14 02:26:29
 categories:
 - 認真讀書心得
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: single
-title: Die Antwoord - Daddy\r\n'date: 2016-10-13 18:23:42
+title: Die Antwoord - Daddy
+date: 2016-10-13 18:23:42
 categories:
 - 認真音樂賞析
 tags:
