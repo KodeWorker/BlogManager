@@ -6,15 +6,17 @@ def generate_post(init_ind, end_ind, file_list):
     
     if ']' in title:
         title = title[title.index(']')+1:]
-    title = title.replace(' ', '')
+    title = title.replace(' - ', '-')
+    title = title.replace(' ', '-')
     title = title.replace('.', '')
-    title = title.replace('-', '')
-    title = title.replace('，', '')
+    title = title.replace('，', '-')
     title = title.replace('？', '')
     title = title.replace('！', '')
-    title = title.replace('☆', '')
-    title = title.replace('(', '')
+    title = title.replace('☆', '-')
+    title = title.replace('(', '-')
     title = title.replace(')', '')
+    title = title.replace('、', '-')
+    title = title.replace('~', '-')
     
     date = file_list[init_ind+2].decode("utf-8")[6:16]
     file_name = '%s-%s-%s-%s.md' %(date[-4:], date[:2], date[-7:-5], title)
@@ -27,7 +29,11 @@ def generate_metadata(metadata):
     
     for line in metadata:
         if 'TITLE'.encode('utf-8') in line:
-            output_metadata.append(b'title: %s' %line[7:])
+            
+            if ']'.encode('utf-8') in line:
+                title = str(line)[str(line).index(']')+1:]
+            
+            output_metadata.append(b'title: %s' %title.encode('utf-8'))
         if 'DATE'.encode('utf-8') in line:
             if 'AM'.encode('utf-8') in line:
                 output_metadata.append(b'date: %s-%s-%s %s:%s:%s\n' %(line[12:16], line[6:8], line[9:11], line[17:19], line[20:22], line[23:25]))
