@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Cigarettes After Sex - K.
+title: Cigarettes-After-Sex-K
 date: 2017-05-14 08:36:13
 categories:
 - 認真音樂賞析

@@ -13,7 +13,7 @@ def generate_post(init_ind, end_ind, file_list):
     title = title.replace('？', '')
     title = title.replace('！', '')
     title = title.replace('☆', '-')
-    title = title.replace('(', '-')
+    title = title.replace('(', '')
     title = title.replace(')', '')
     title = title.replace('、', '-')
     title = title.replace('~', '-')
@@ -33,6 +33,17 @@ def generate_metadata(metadata):
             title = str(line, 'utf-8')
             if ']' in title:
                 title = title[title.index(']')+1:]
+            title = title.replace(' - ', '-')
+            title = title.replace(' ', '-')
+            title = title.replace('.', '')
+            title = title.replace('，', '-')
+            title = title.replace('？', '')
+            title = title.replace('！', '')
+            title = title.replace('☆', '-')
+            title = title.replace('(', '')
+            title = title.replace(')', '')
+            title = title.replace('、', '-')
+            title = title.replace('~', '-')
             
             output_metadata.append(b'title: %s' %title.encode('utf-8'))
         if 'DATE'.encode('utf-8') in line:

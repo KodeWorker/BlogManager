@@ -1,6 +1,6 @@
 ---
 layout: single
-title: K. Flay - Blood in the Cut
+title: K-Flay-Blood-in-the-Cut
 date: 2017-07-09 02:21:26
 categories:
 - 認真音樂賞析

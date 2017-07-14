@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 屠魔特攻二人組(Tucker and Dale vs. Evil)
+title: 屠魔特攻二人組Tucker-and-Dale-vs-Evil
 date: 2016-10-30 06:06:31
 categories:
 - 認真電影心得
