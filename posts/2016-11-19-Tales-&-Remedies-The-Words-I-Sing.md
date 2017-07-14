@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Tales-&-Remedies-The-Words-I-Sing
+title: Tales & Remedies - The Words I Sing
 date: 2016-11-19 16:14:08
 categories:
 - 認真音樂賞析

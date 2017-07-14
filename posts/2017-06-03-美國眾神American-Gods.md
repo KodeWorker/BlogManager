@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 美國眾神American-Gods
+title: 美國眾神(American Gods)
 date: 2017-06-03 06:51:54
 categories:
 - 認真讀書心得

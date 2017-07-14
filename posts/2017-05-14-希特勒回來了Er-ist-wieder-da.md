@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 希特勒回來了Er-ist-wieder-da
+title: 希特勒回來了(Er ist wieder da)
 date: 2017-05-14 02:26:29
 categories:
 - 認真讀書心得

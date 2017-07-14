@@ -33,24 +33,29 @@ def generate_metadata(metadata):
             title = str(line, 'utf-8')
             if ']' in title:
                 title = title[title.index(']')+1:]
-            title = title.replace(' - ', '-')
-            title = title.replace(' ', '-')
-            title = title.replace('.', '')
-            title = title.replace('，', '-')
-            title = title.replace('？', '')
-            title = title.replace('！', '')
-            title = title.replace('☆', '-')
-            title = title.replace('(', '')
-            title = title.replace(')', '')
-            title = title.replace('、', '-')
-            title = title.replace('~', '-')
+#            title = title.replace(' - ', '-')
+#            title = title.replace(' ', '-')
+#            title = title.replace('.', '')
+#            title = title.replace('，', '-')
+#            title = title.replace('？', '')
+#            title = title.replace('！', '')
+#            title = title.replace('☆', '-')
+#            title = title.replace('(', '')
+#            title = title.replace(')', '')
+#            title = title.replace('、', '-')
+#            title = title.replace('~', '-')
             
             output_metadata.append(b'title: %s' %title.encode('utf-8'))
         if 'DATE'.encode('utf-8') in line:
             if 'AM'.encode('utf-8') in line:
                 output_metadata.append(b'date: %s-%s-%s %s:%s:%s\n' %(line[12:16], line[6:8], line[9:11], line[17:19], line[20:22], line[23:25]))
             else:
-                output_metadata.append(b'date: %s-%s-%s %s:%s:%s\n' %(line[12:16], line[6:8], line[9:11], str(int(line[17:19])+12).encode('utf-8'), line[20:22], line[23:25]))
+                hour = int(line[17:19])
+                if hour < 12:
+                    time = str(hour+12).encode('utf-8')
+                else:
+                    time = str(hour).encode('utf-8')
+                output_metadata.append(b'date: %s-%s-%s %s:%s:%s\n' %(line[12:16], line[6:8], line[9:11], time, line[20:22], line[23:25]))
         if 'PRIMARY CATEGORY'.encode('utf-8') in line:
             output_metadata.append(b'categories:\n')
             output_metadata.append(b'- %s\n' %line[18:-2])

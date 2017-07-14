@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Wolf-Alice-Moaning-Lisa-Smile
+title: Wolf Alice - Moaning Lisa Smile
 date: 2016-11-21 15:27:25
 categories:
 - 認真音樂賞析

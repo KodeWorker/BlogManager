@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 猜火車Trainspotting
+title: 猜火車(Trainspotting)
 date: 2016-11-20 06:59:11
 categories:
 - 認真電影心得
