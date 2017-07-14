@@ -75,6 +75,9 @@ def generate_content(content):
             pass
         elif '<p>'.encode('utf-8') in line:
             output_content.append(b'%s\n' %line[3:-6])
+        elif 'COMMENT'.encode('utf-8') in line:
+            output_content = output_content[:-1]
+            break
         else:
             output_content.append(line)
     return output_content
