@@ -3,8 +3,6 @@ import os
 def generate_post(init_ind, end_ind, file_list):
     file_content = file_list[init_ind:end_ind - 1]
     title = file_list[init_ind].decode("utf-8")[7:-2]
-    if ']' in title:
-        title = title[title.index(']')+1:]
     date = file_list[init_ind+2].decode("utf-8")[6:16]
     file_name = '%s-%s-%s-%s.md' %(date[-4:], date[:2], date[-7:-5], title)
     return file_content, file_name
@@ -31,7 +29,7 @@ def generate_metadata(metadata):
             for tag in tag_list:
                 output_metadata.append(b'- %s\n' %(tag[1:-1].encode('utf-8')))
     output_metadata.append(b'---\n')
-    
+    output_metadata.append(b'\n')
     return output_metadata
 
 def generate_content(content):
