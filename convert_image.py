@@ -20,13 +20,17 @@ if __name__ == '__main__':
     
     image_dirs = [x[1] for x in os.walk(album_path)][0]
     for image_dir in image_dirs:
-        if not os.path.exists(convert_path + '/' + image_dir):
-            os.makedirs(convert_path + '/' + image_dir)
+        ind = image_dir.index('-') + 1
+        
+        if not os.path.exists(convert_path + '/' + image_dir[8:]):
+            os.makedirs(convert_path + '/' + image_dir[ind:])
         
         files = [x[2] for x in os.walk(album_path + '/' + image_dir)][0]
         for file in files:
+            idx = file.index('-') + 1
+            
             if not file.endswith('.jpg'):
                 im = Image.open(album_path + '/' + image_dir + '/' + file)
-                im.convert('RGB').save(convert_path + '/' + image_dir + '/%s.jpg' %(file[:-4]))
+                im.convert('RGB').save(convert_path + '/' + image_dir[ind:] + '/%s.jpg' %(file[idx:-4]))
             else:
-                copyfile(album_path + '/' + image_dir + '/' + file, convert_path + '/' + image_dir + '/' + file)
+                copyfile(album_path + '/' + image_dir + '/' + file, convert_path + '/' + image_dir[ind:] + '/' + file[idx:])
