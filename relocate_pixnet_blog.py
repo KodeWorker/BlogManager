@@ -94,7 +94,7 @@ if __name__ == '__main__':
     """Section 1: Setting File and Path"""
     ###########################################################################
 
-    file_path = os.path.join(os.path.dirname(__file__), 'pixnet_backup', 'blog-export-mt-KWbuster-20170714081020.txt')
+    file_path = os.path.join(os.path.dirname(__file__), 'pixnet_backup', 'blog-export-mt.txt')
     post_dir = os.path.join(os.path.dirname(__file__), 'posts')
 
     if not os.path.exists(post_dir):
