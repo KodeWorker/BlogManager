@@ -6,10 +6,10 @@ import math
 
 if __name__ == "__main__":
     
-    source_dir = "../KodeWorker.github.io/assets/images"
-    
+    source_dir = "../KodeWorker.github.io/assets/images"    
     target_dir = "images"
     limit = 1024
+    quality = 98
     
     if os.path.exists(target_dir):
         rmtree(target_dir)
@@ -29,17 +29,17 @@ if __name__ == "__main__":
                 
                 # Image Compression                
                 img = Image.open(source_path)
-                if max(img.size) >= limit:
+                if max(img.size) > limit:
                     h = img.size[0]
                     w = img.size[1]
                     if h >= w:
-                        ratio = 1024/h
+                        ratio = limit/h
                     else:
-                        ratio = 1024/w
+                        ratio = limit/w
                     size = math.ceil(h*ratio), math.ceil(w*ratio)
                     
                     img.thumbnail(size, Image.ANTIALIAS)
-                img.save(target_path, optimize=True, quality=95)
+                img.save(target_path, optimize=True, quality=quality)
             
             elif fileName.lower().endswith(".gif"):
                 
